@@ -18,10 +18,10 @@ class PostController extends Controller
     if(auth()->user()->id !== $post['user_id']){
         return redirect('/');
     }
-    $incomingFields = $request->validate([
-        'title' => 'required',
-        'body' => 'required'
-    ]);
+    // $incomingFields = $request->validate([
+    //     'title' => 'required',
+    //     'body' => 'required'
+    // ]);
     $incomingFields['title'] = strip_tags($incomingFields['title']);
     $incomingFields['body'] = strip_tags($incomingFields['body']);
 
