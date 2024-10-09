@@ -29,6 +29,7 @@ class PostController extends Controller
     $post->update($incomingFields);
     return redirect('/');
   }
+  
     public function showEditScreen(Post $post) {
         if(auth()->user()->id !== $post['user_id']){
             return redirect('/');
