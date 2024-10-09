@@ -22,7 +22,6 @@ class PostController extends Controller
         'title' => 'required',
         'body' => 'required'
     ]);
-
     $incomingFields['title'] = strip_tags($incomingFields['title']);
     $incomingFields['body'] = strip_tags($incomingFields['body']);
 
